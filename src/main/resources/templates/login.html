@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <link rel="stylesheet" href="/css/login.css"/>
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="login-form">
+  <form
+          th:action="@{/login}"
+          th:method="POST">
+    <h1>Вход</h1>
+    <div class="content">
+
+      <div class="input-field">
+        <input type="text" name="username" placeholder="Потребителско име" minlength="3" autocomplete="nope">
+      </div>
+
+      <div class="input-field">
+        <input type="password" name="password" placeholder="Парола" minlength="3" autocomplete="new-password">
+      </div>
+      <a href="register" class="link">Създаване на профил ?</a>
+    </div>
+    <div class="action">
+      <button type="submit">Вход</button>
+    </div>
+  </form>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакти</title>
+    <link href="/css/contacts.css" rel="stylesheet" type="text/css">
+</head>
+<header>
+    <th:block
+            th:include="~{fragments/nav}">
+    </th:block>
+</header>
+<body>
+
+<div class="container">
+    <form onsubmit="sendEmail(); reset(); return false;">
+        <h3>Свържете с нас</h3>
+        <input type="text"  id="name" placeholder="Име" required>
+        <input type="email"  id="email" placeholder="Имей" required>
+        <input type="text"  id="phone" placeholder="Телефон" required>
+        <textarea id="message" rows="4" placeholder="Вашето съобщение"></textarea>
+        <button type="submit">Изпрати</button>
+    </form>
+</div>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script>
+    function sendEmail(){
+        Email.send({
+            secureToken: "cf00087c-815f-48d3-87d0-b5afe0303d7b",
+            To : 'iliyyaniordanov@gmail.com',
+            From : document.getElementById("email").value,
+            Subject : "New Contact Form",
+            Body : "Name: " + document.getElementById("name").value
+                + "<br> Email: "  + document.getElementById("email").value
+                + "<br> Phone no: "  + document.getElementById("phone").value
+                + "<br> Message: "  + document.getElementById("message").value
+        }).then(
+            message => alert("Message sent succesfully"));
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Продукти</title>
+    <link rel="stylesheet" href="/css/products.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+
+</head>
+<header>
+    <th:block
+            th:include="~{fragments/nav}">
+    </th:block>
+</header>
+<body>
+<div class="container">
+
+    <a href="/basket">
+        <div class="cart">
+            <i class="fa fa-shopping-cart"></i>
+            <div id="cartAmount" class="cartAmount">0</div>
+        </div>
+    </a>
+    <h3 class="title">Селекция</h3>
+
+    <div class="products-container">
+        <div class="product" data-name="p-1">
+            <img src="/images/imageForProducts/tomato.jpg">
+            <h3>Домат</h3>
+            <div class="price">2.00лв</div>
+        </div>
+
+
+        <div class="product" data-name="p-2">
+            <img src="/images/imageForProducts/banana.jpg">
+            <h3>Банан</h3>
+            <div class="price">2.00лв</div>
+        </div>
+
+        <div class="product" data-name="p-3">
+            <img src="/images/imageForProducts/cucumber.jpg">
+            <h3>Краставица</h3>
+            <div class="price">3.00лв</div>
+        </div>
+
+        <div class="product" data-name="p-4">
+            <img src="/images/imageForProducts/graypFruit.jpg">
+            <h3>Грейпфрут</h3>
+            <div class="price">3.00лв</div>
+        </div>
+
+        <div class="product" data-name="p-5">
+            <img src="/images/imageForProducts/watermelon.jpg">
+            <h3>Диня</h3>
+            <div class="price">1.00лв</div>
+        </div>
+
+        <div class="product" data-name="p-6">
+            <img src="/images/imageForProducts/portokal.jpg">
+            <h3>Портокал</h3>
+            <div class="price">2.00лв</div>
+        </div>
+
+        <div class="product" data-name="p-7">
+            <img src="/images/imageForProducts/potato.jpg">
+            <h3>картофи</h3>
+            <div class="price">3.00лв</div>
+        </div>
+
+        <div class="product" data-name="p-8">
+            <img src="/images/imageForProducts/melon.webp">
+            <h3>пъпеш</h3>
+            <div class="price">1.00лв</div>
+        </div>
+
+        <div class="product" data-name="p-9">
+            <img src="/images/imageForProducts/cola2l.jpg">
+            <h3>кола</h3>
+            <div class="price">2.00лв</div>
+        </div>
+
+        <div class="product" data-name="p-10">
+            <img src="/images/imageForProducts/whiskey.png">
+            <h3>уиски</h3>
+            <div class="price">40.00лв</div>
+        </div>
+
+
+        <div class="product" data-name="p-11">
+            <img src="/images/imageForProducts/almondmilk.jpg">
+            <h3>ядково мляко</h3>
+            <div class="price">4.00лв</div>
+        </div>
+
+
+    </div>
+</div>
+
+
+
+<div class="products-preview">
+
+    <div class="preview" data-target="p-1">
+        <i class="fas fa-times"></i>
+        <img src="/images/imageForProducts/tomato.jpg">
+        <h3>домати</h3>
+        <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+
+        </div>
+        <div class="price">2.00лв</div>
+        <div class="buttons">
+            <a href="" class="buy">Купи сега</a>
+            <a href="" class="cart">Добави в количка</a>
+        </div>
+    </div>
+
+    <div class="preview" data-target="p-2">
+        <i class="fas fa-times"></i>
+        <img src="/images/imageForProducts/banana.jpg">
+        <h3>банан</h3>
+        <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+
+        </div>
+        <div class="price">2.00лв</div>
+        <div class="buttons">
+            <a href="" class="buy">Купи сега</a>
+            <a href="" class="cart">Добави в количка</a>
+        </div>
+    </div>
+
+    <div class="preview" data-target="p-3">
+        <i class="fas fa-times"></i>
+        <img src="/images/imageForProducts/cucumber.jpg">
+        <h3>краставица</h3>
+        <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+
+        </div>
+        <div class="price">3.00лв</div>
+        <div class="buttons">
+            <a href="" class="buy">Купи сега</a>
+            <a href="" class="cart">Добави в количка</a>
+        </div>
+    </div>
+
+    <div class="preview" data-target="p-4">
+        <i class="fas fa-times"></i>
+        <img src="/images/imageForProducts/graypFruit.jpg">
+        <h3>грейпфрут</h3>
+        <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+
+        </div>
+        <div class="price">4.00лв</div>
+        <div class="buttons">
+            <a href="" class="buy">Купи сега</a>
+            <a href="" class="cart">Добави в количка</a>
+        </div>
+    </div>
+
+    <div class="preview" data-target="p-5">
+        <i class="fas fa-times"></i>
+        <img src="/images/imageForProducts/watermelon.jpg">
+        <h3>диня</h3>
+        <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+
+        </div>
+        <div class="price">1.00лв</div>
+        <div class="buttons">
+            <a href="" class="buy">Купи сега</a>
+            <a href="" class="cart">Добави в количка</a>
+        </div>
+    </div>
+
+    <div class="preview" data-target="p-6">
+        <i class="fas fa-times"></i>
+        <img src="/images/imageForProducts/portokal.jpg">
+        <h3>портокал</h3>
+        <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+
+        </div>
+        <div class="price">2.00лв</div>
+        <div class="buttons">
+            <a href="" class="buy">Купи сега</a>
+            <a href="" class="cart">Добави в количка</a>
+        </div>
+    </div>
+
+    <div class="preview" data-target="p-7">
+        <i class="fas fa-times"></i>
+        <img src="/images/imageForProducts/potato.jpg">
+        <h3>картофи</h3>
+        <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+
+        </div>
+        <div class="price">3.00лв</div>
+        <div class="buttons">
+            <a href="" class="buy">Купи сега</a>
+            <a href="" class="cart">Добави в количка</a>
+        </div>
+    </div>
+
+    <div class="preview" data-target="p-8">
+        <i class="fas fa-times"></i>
+        <img src="/images/imageForProducts/melon.webp">
+        <h3>пъпеш</h3>
+        <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+
+        </div>
+        <div class="price">1.00лв</div>
+        <div class="buttons">
+            <a href="" class="buy">Купи сега</a>
+            <a href="" class="cart">Добави в количка</a>
+        </div>
+    </div>
+
+    <div class="preview" data-target="p-9">
+        <i class="fas fa-times"></i>
+        <img src="/images/imageForProducts/cola2l.jpg">
+        <h3>кола</h3>
+        <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+
+        </div>
+        <div class="price">2.00лв</div>
+        <div class="buttons">
+            <a href="" class="buy">Купи сега</a>
+            <a href="" class="cart">Добави в количка</a>
+        </div>
+    </div>
+
+<div class="preview" data-target="p-10">
+    <i class="fas fa-times"></i>
+    <img src="/images/imageForProducts/whiskey.png">
+    <h3>уиски</h3>
+    <div class="stars">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star-half-alt"></i>
+
+    </div>
+    <div class="price">40.00лв</div>
+    <div class="buttons">
+        <a href="" class="buy">Купи сега</a>
+        <a href="" class="cart">Добави в количка</a>
+    </div>
+</div>
+
+<div class="preview" data-target="p-11">
+    <i class="fas fa-times"></i>
+    <img src="/images/imageForProducts/almondmilk.jpg">
+    <h3>ядково мляко</h3>
+    <div class="stars">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star-half-alt"></i>
+
+    </div>
+    <div class="price">4.00лв</div>
+    <div class="buttons">
+        <a href="" class="buy">Купи сега</a>
+        <a href="" class="cart">Добави в количка</a>
+    </div>
+</div>
+
+
+</div>
+</body>
+<script>
+    let preveiwContainer = document.querySelector('.products-preview');
+    let previewBox = preveiwContainer.querySelectorAll('.preview');
+
+    document.querySelectorAll('.products-container .product').forEach(product =>{
+        product.onclick = () =>{
+            preveiwContainer.style.display = 'flex';
+            let name = product.getAttribute('data-name');
+            previewBox.forEach(preview =>{
+                let target = preview.getAttribute('data-target');
+                if(name == target){
+                    preview.classList.add('active');
+                }
+            });
+        };
+    });
+
+    previewBox.forEach(close =>{
+        close.querySelector('.fa-times').onclick = () =>{
+            close.classList.remove('active');
+            preveiwContainer.style.display = 'none';
+        };
+    });
+</script>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <link rel="stylesheet" href="/css/register.css"/>
+</head>
+<body>
+<div>
+
+    <form th:action="@{/register}"
+           th:method="POST"
+           th:object="${registrationDTO}">
+        <h4 class="text-warning text-center pt-5">Регистрация</h4>
+
+        <label>
+            <input type="text" class="input" name="email" placeholder="Имейл" minlength="3" maxlength="20"
+                   th:field="*{email}"/>
+            <div class="line-box">
+                <div class="line"></div>
+            </div>
+        </label>
+
+        <label>
+            <input type="text" class="input" name="username" placeholder="Потребителско име" minlength="3"
+                   th:field="*{username}"/>
+            <div class="line-box">
+                <div class="line"></div>
+            </div>
+        </label>
+
+        <label>
+            <input type="password" class="input" name="password" placeholder="Парола" maxlength="3"
+                   th:field="*{password}"/>
+            <div class="line-box">
+                <div class="line"></div>
+            </div>
+        </label>
+
+        <label>
+            <input type="password" class="input" name="confirm" placeholder="Потвърди парола"
+                   th:field="*{confirmPassword}"/>
+            <div class="line-box">
+                <div class="line"></div>
+            </div>
+        </label>
+
+        <button type="submit">Регистрирай</button>
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,85 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+.title{
+    font-family: "Verdana", "sans-serif";
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    top: 50px;
+    position: relative;
+}
+.title h1{
+    font-size: 70px;
+}
+.description{
+    margin: 30px auto;
+    font-size: 22px;
+    font-weight: 100;
+    line-height: 25px;
+}
+.backgroundimg{
+    height: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)), url(/images/grocery.jpg);
+    background-size:cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+button{
+    font-family: "Verdana", "sans-serif";
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #ff9d00;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+span{
+    background: #ff9d00;
+    height: 100%;
+    width: 0;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+button:hover span{
+    width: 100%;
+}
+button:hover{
+    border: none;
+}
+.img{
+  width: 720px;
+  height: 390px;
+  margin-bottom: -400px;
+}
+
+.map{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+   }
+ .titleformap{
+       color: white;
+       font-family: "Verdana", "sans-serif";
+       margin-bottom: 60px;
+       text-align: center;
+ }
+iframe{
+    width: 80%;
+    height: 500px;
+}

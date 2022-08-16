@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700');
+*
+{
+    margin: 0;
+    padding: 0;
+
+}
+h2
+{
+    font-family: 'Verdana' ,sans-serif;
+}
+body
+{
+    background-image:url(/images/grocery.jpg);
+    background-size: cover;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-top: 100px;
+}
+.cover
+{
+    width: 900px;
+    height: 400px;
+    margin-top: 120px;
+    display: flex;
+}
+.box
+{
+    margin: 15px;
+    width: 800px;
+    height: 400px;
+    box-shadow: -1px 0 10px #000000;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+img
+{
+    width: 300px;
+    height: 200px;
+    display: flex;
+}
+.desc
+{
+    font-family: Arial, sans-serif;
+    text-shadow:0.5px 0.5px;
+}
