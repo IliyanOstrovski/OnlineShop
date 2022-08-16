@@ -28,6 +28,8 @@ public class AuthService {
             return false;
         }
 
+
+
         Optional<User> byEmail = this.userRepository.findByEmail(registrationDTO.getEmail());
         if (byEmail.isPresent()){
             return false;

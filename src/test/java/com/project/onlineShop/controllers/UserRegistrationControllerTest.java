@@ -10,12 +10,10 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 import static org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestPostProcessors.csrf;
 
-import javax.persistence.Table;
-
 
 @SpringBootTest()
 @AutoConfigureMockMvc
-public class UserRegistrationController {
+public class UserRegistrationControllerTest {
 
     @Autowired
     private MockMvc mockMvc;
