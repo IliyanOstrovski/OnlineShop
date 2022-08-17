@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
 <head>
   <link rel="stylesheet" href="/css/login.css"/>
 </head>
@@ -13,11 +15,15 @@
     <div class="content">
 
       <div class="input-field">
-        <input type="text" name="username" placeholder="Потребителско име" minlength="3" autocomplete="nope">
+        <input type="text" name="username" placeholder="Потребителско име" minlength="3"
+               />
+
       </div>
 
       <div class="input-field">
-        <input type="password" name="password" placeholder="Парола" minlength="3" autocomplete="new-password">
+        <input type="password" name="password" placeholder="Парола"  minlength="3"
+               />
+
       </div>
       <a href="register" class="link">Създаване на профил ?</a>
     </div>

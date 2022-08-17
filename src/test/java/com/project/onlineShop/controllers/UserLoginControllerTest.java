@@ -13,7 +13,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 
-@SpringBootTest()
+@SpringBootTest
 @AutoConfigureMockMvc
 public class UserLoginControllerTest {
     @Autowired
@@ -27,15 +27,17 @@ public class UserLoginControllerTest {
     }
 
     @Test
-    void testUserLogin() throws Exception{
+    void testUseSuccessfulLogin() throws Exception{
         mockMvc.perform(post("/login").
                         param("username", "iliyan").
                         param("password", "1111")
                         .with(csrf()))
                 .andExpect(status().is3xxRedirection())
                 .andExpect(redirectedUrl("/home"));
+      }
 
-    }
+
+
 
 
 

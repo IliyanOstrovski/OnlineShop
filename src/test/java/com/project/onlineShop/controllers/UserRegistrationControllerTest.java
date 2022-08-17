@@ -25,7 +25,7 @@ public class UserRegistrationControllerTest {
     }
 
     @Test
-    void testUserRegister() throws Exception{
+    void testUserSuccessfulRegister() throws Exception{
        mockMvc.perform(post("/register").
                param("email", "gosho@gmail.com").
                param("username", "gosho").

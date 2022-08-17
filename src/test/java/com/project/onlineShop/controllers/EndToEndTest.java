@@ -4,8 +4,11 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.web.servlet.MockMvc;
+import org.testng.Assert;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
@@ -13,10 +16,11 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 @SpringBootTest
 @AutoConfigureMockMvc
 public class EndToEndTest {
-
+    @Autowired
+    private MockMvc mockMvc;
 
     @org.testng.annotations.Test
-    void openBasketPage() throws Exception {
+    void openHomePage() throws Exception {
         //First should run it, before start the test!!!
 
 
@@ -41,6 +45,9 @@ public class EndToEndTest {
         //clicking on login button
         WebElement loginButton = driver.findElement(By.tagName("button"));
         loginButton.click();
+
+
+
 
         //end of test
         driver.close();
