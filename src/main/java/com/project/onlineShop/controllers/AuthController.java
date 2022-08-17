@@ -4,6 +4,7 @@ import com.project.onlineShop.models.dtos.RegistrationDTO;
 import com.project.onlineShop.services.AuthService;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -14,6 +15,8 @@ import javax.validation.Valid;
 @Controller
 public class AuthController {
     private AuthService authService;
+
+
 
     public AuthController(AuthService authService) {
         this.authService = authService;

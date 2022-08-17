@@ -8,14 +8,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.web.servlet.MockMvc;
-import org.testng.Assert;
 
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 
 @SpringBootTest
 @AutoConfigureMockMvc
-public class EndToEndTest {
+public class EndToEndLoginTest {
     @Autowired
     private MockMvc mockMvc;
 
@@ -45,9 +42,7 @@ public class EndToEndTest {
         //clicking on login button
         WebElement loginButton = driver.findElement(By.tagName("button"));
         loginButton.click();
-
-
-
+        Thread.sleep(2000);
 
         //end of test
         driver.close();
