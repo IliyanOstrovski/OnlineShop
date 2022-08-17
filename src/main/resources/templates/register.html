@@ -28,7 +28,7 @@
         </label>
 
         <label>
-            <input type="password" class="input" name="password" placeholder="Парола" maxlength="3"
+            <input type="password" class="input" name="password" placeholder="Парола" minlength="3"
                    th:field="*{password}"/>
             <div class="line-box">
                 <div class="line"></div>
@@ -36,7 +36,7 @@
         </label>
 
         <label>
-            <input type="password" class="input" name="confirm" placeholder="Потвърди парола"
+            <input type="password" class="input" name="confirm" placeholder="Потвърди парола" minlength="3"
                    th:field="*{confirmPassword}"/>
             <div class="line-box">
                 <div class="line"></div>
