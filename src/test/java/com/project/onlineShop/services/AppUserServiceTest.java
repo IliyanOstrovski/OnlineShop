@@ -1,21 +1,27 @@
 package com.project.onlineShop.services;
 
 import com.project.onlineShop.models.User;
+import com.project.onlineShop.models.dtos.RegistrationDTO;
 import com.project.onlineShop.repositories.UserRepository;
+import com.project.onlineShop.services.AppUserDetailsService;
+import com.project.onlineShop.services.AuthService;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
 import org.mockito.Mockito;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.test.context.ContextConfiguration;
 
 import java.util.Optional;
 
+import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 
@@ -28,9 +34,8 @@ public class AppUserServiceTest {
     @Mock
     private UserRepository mockRepo;
 
-    @Mock
-    private User user;
-
+    @Autowired
+    private EmailService mailSenderService;
 
     @BeforeEach
     void setUp(){
@@ -71,5 +76,15 @@ public class AppUserServiceTest {
        Assertions.assertThrows(UsernameNotFoundException.class,
                () -> mockService.loadUserByUsername("invalid_email_user"));
     }
+
+    @Test
+    public void sendEmail() {
+        mailSenderService.sendEmail("test1@gmail.com", "test2@gmail.com", "Test Subject",
+                "Test Body");
+    }
+
+
+
+
 
 }

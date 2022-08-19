@@ -1,5 +1,7 @@
 package com.project.onlineShop.controllers;
 
+import com.project.onlineShop.models.dtos.RegistrationDTO;
+import com.project.onlineShop.services.AuthService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
@@ -18,6 +20,9 @@ public class UserRegistrationControllerTest {
     @Autowired
     private MockMvc mockMvc;
 
+    @Autowired
+    private AuthService authService;
+
     @Test
     void testRegisterShow() throws Exception{
         mockMvc.perform(get("/register"))
@@ -34,6 +39,18 @@ public class UserRegistrationControllerTest {
                        .with(csrf()))
                .andExpect(status().is3xxRedirection())
                .andExpect(redirectedUrl("/login"));
-
     }
+
+    @Test
+    void testUserNotSuccessfulRegister() throws Exception{
+        mockMvc.perform(post("/register").
+                        param("email", "").
+                        param("username", "gosho").
+                        param("password", "1111").
+                        param("confirmPassword", "1111")
+                        .with(csrf()))
+                .andExpect(status().is3xxRedirection())
+                .andExpect(redirectedUrl("/register"));
+    }
+
 }

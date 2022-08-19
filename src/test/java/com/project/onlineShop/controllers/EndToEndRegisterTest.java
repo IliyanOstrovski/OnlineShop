@@ -1,51 +1,46 @@
 package com.project.onlineShop.controllers;
 
-import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
-import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.web.servlet.MockMvc;
 
-
-@SpringBootTest
-@AutoConfigureMockMvc
-public class EndToEndLoginTest {
+public class EndToEndRegisterTest {
     @Autowired
     private MockMvc mockMvc;
 
     @org.testng.annotations.Test
-    void openHomePageFromRegister() throws Exception {
+    void openHomePage() throws Exception {
         //First should run it, before start the test!!!
-
-
         //initialise Driver
-
-       System.setProperty("webdriver.gecko.driver", "src/main/resources/geckodriver");
+        System.setProperty("webdriver.gecko.driver", "src/main/resources/geckodriver");
         WebDriver driver = new FirefoxDriver();
         //opening Browser
         driver.manage().window().maximize();
-        driver.get("localhost:8080/login");
+        driver.get("localhost:8080/register");
         Thread.sleep(1000);
+
+        WebElement email = driver.findElement(By.name("email"));
+        email.sendKeys("pesho@gmail.com");
 
         //writing username
         WebElement username = driver.findElement(By.name("username"));
-        username.sendKeys("iliyan");
+        username.sendKeys("pesho");
 
         //writing password
         WebElement password = driver.findElement(By.name("password"));
         password.sendKeys("1111");
+
+        WebElement confirmPassword = driver.findElement(By.name("confirmPassword"));
+        confirmPassword.sendKeys("1111");
         Thread.sleep(1000);
 
         //clicking on login button
-        WebElement loginButton = driver.findElement(By.tagName("button"));
-        loginButton.click();
+        WebElement registerButton = driver.findElement(By.tagName("button"));
+        registerButton.click();
         Thread.sleep(2000);
-
-
 
         //end of test
         driver.close();

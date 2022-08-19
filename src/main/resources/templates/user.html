@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS User Profile Card</title>
+    <link rel="stylesheet" href="/css/profile.css"/>
+</head>
+<header>
+    <th:block
+            th:include="~{fragments/nav}">
+    </th:block>
+</header>
+<body>
+
+<div class="wrapper">
+    <div class="left">
+        <img src="/images/profilePicture.jpg"
+             alt="user" width="100">
+        <h4>Iliyan Iordanov</h4>
+        <p>Java Developer</p>
+    </div>
+    <div class="right">
+        <div class="info">
+            <h3>Information</h3>
+            <div class="info_data">
+                <div class="data">
+                    <h4>Email</h4>
+                    <p>iliyan@gmail.com</p>
+                </div>
+                <div class="data">
+                    <h4>Phone</h4>
+                    <p>881-223-9961</p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="social_media">
+            <ul>
+                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

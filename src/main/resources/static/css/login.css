@@ -53,6 +53,9 @@ body {
 .login-form .input-field input::-moz-placeholder {
   text-transform: uppercase;
 }
+.login-form .input-field span{
+  color: red;
+}
 .login-form .input-field input:-ms-input-placeholder {
   text-transform: uppercase;
 }

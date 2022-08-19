@@ -23,12 +23,15 @@ public class UserLoginControllerTest {
     @Autowired
     private MockMvc mockMvc;
 
-
-
     @Test
     void testLoginShow() throws Exception{
         mockMvc.perform(get("/login"))
                 .andExpect(status().isOk());
+    }
+    @Test
+    void testIndexShow() throws Exception{
+        mockMvc.perform(get("/home"))
+                .andExpect(status().is3xxRedirection());
     }
 
     @Test
@@ -39,8 +42,12 @@ public class UserLoginControllerTest {
                         .with(csrf()))
                 .andExpect(status().is3xxRedirection())
                 .andExpect(redirectedUrl("/home"));
-
       }
+
+
+
+
+
 
 
 
