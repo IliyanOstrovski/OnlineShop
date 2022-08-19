@@ -12,32 +12,36 @@
         <h4 class="text-warning text-center pt-5">Регистрация</h4>
 
         <label>
-            <input type="text" class="input" name="email" placeholder="Имейл" minlength="3" maxlength="20"
+            <input type="text" class="input" name="email"  id="contact-email" onkeyup="validateEmail()"  placeholder="Имейл" minlength="3" maxlength="20"
                    th:field="*{email}"/>
+            <span id="email-error"></span>
             <div class="line-box">
                 <div class="line"></div>
             </div>
         </label>
 
         <label>
-            <input type="text" class="input" name="username" placeholder="Потребителско име" minlength="3"
+            <input type="text" class="input" name="username"  id="contact-name" onkeyup="validateName()" placeholder="Потребителско име" minlength="3"
                    th:field="*{username}"/>
+            <span id="name-error" ></span>
             <div class="line-box">
                 <div class="line"></div>
             </div>
         </label>
 
         <label>
-            <input type="password" class="input" name="password" placeholder="Парола" minlength="3"
+            <input type="password" class="input" name="password"  id="contact-password" onkeyup="validatePassword()" placeholder="Парола" minlength="3"
                    th:field="*{password}"/>
+            <span id="password-error" ></span>
             <div class="line-box">
                 <div class="line"></div>
             </div>
         </label>
 
         <label>
-            <input type="password" class="input" name="confirm" placeholder="Потвърди парола" minlength="3"
+            <input type="password" class="input" name="confirm"  id="contact-confirmPassword" onkeyup="validateConfirmPassword()" placeholder="Потвърди парола" minlength="3"
                    th:field="*{confirmPassword}"/>
+            <span id="confirmPassword-error"></span>
             <div class="line-box">
                 <div class="line"></div>
             </div>
@@ -46,5 +50,43 @@
         <button type="submit">Регистрирай</button>
     </form>
 </div>
+<script>
+    var emailError = document.getElementById('email-error');
+    var nameError = document.getElementById('name-error');
+    var passwordError = document.getElementById('password-error');
+    var confirmPasswordError = document.getElementById('confirmPassword-error');
+    function validateEmail(){
+        var name = document.getElementById('contact-email').value;
+        if (name.length==0){
+            emailError.innerHTML='Това поле е задължително!';
+            return false;
+        }
+        return true;
+    }
+    function validateName(){
+        var name = document.getElementById('contact-name').value;
+        if (name.length==0){
+            nameError.innerHTML='Това поле е задължително!';
+            return false;
+        }
+        return true;
+    }
+    function validatePassword(){
+        var password = document.getElementById('contact-password').value;
+        if (password.length==0){
+            passwordError.innerHTML='Това поле е задължително!';
+            return false;
+        }
+        return true;
+    }
+    function validateConfirmPassword(){
+        var password = document.getElementById('contact-confirmPassword').value;
+        if (password.length==0){
+            confirmPasswordError.innerHTML='Това поле е задължително!';
+            return false;
+        }
+        return true;
+    }
+</script>
 </body>
 </html>
