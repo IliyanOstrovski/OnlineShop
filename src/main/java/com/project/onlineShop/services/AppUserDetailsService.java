@@ -2,7 +2,6 @@ package com.project.onlineShop.services;
 
 import com.project.onlineShop.models.User;
 import com.project.onlineShop.models.UserRole;
-import com.project.onlineShop.models.dtos.RegistrationDTO;
 import com.project.onlineShop.repositories.UserRepository;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -10,8 +9,6 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 
-import javax.management.relation.Role;
-import java.util.List;
 
 public class AppUserDetailsService implements UserDetailsService {
     private final UserRepository userRepository;

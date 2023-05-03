@@ -6,7 +6,8 @@ import org.springframework.web.context.annotation.SessionScope;
 
 @Component
 @SessionScope
-public class LoggedUser {
+public class
+LoggedUser {
     private long id;
 
 
